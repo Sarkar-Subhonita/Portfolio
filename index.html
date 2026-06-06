@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Subhonita Sarkar — Engineering Student, Tech Enthusiast & Developer. Explore my portfolio showcasing projects, skills, and experience.">
+    <meta name="keywords"
+        content="Subhonita Sarkar, portfolio, developer, engineering student, web development, projects">
+    <meta name="author" content="Subhonita Sarkar">
+    <title>Subhonita Sarkar | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <!-- Apply saved theme before first paint to prevent flash -->
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+            if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+        })();
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <i data-lucide="sun" class="theme-icon icon-sun"></i>
+                <i data-lucide="moon" class="theme-icon icon-moon"></i>
+            </button>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-gradient-orb orb-1"></div>
+            <div class="hero-gradient-orb orb-2"></div>
+            <div class="hero-gradient-orb orb-3"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="hero-content">
+            <!-- Open to Opportunities badge temporarily disabled -->
+            <!--
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Open to Opportunities
+            </div>
+            -->
+            <h1 class="hero-title">
+                Hi, I'm <span class="hero-typewriter"><span class="typewriter-text" id="typewriterText"></span><span
+                        class="typewriter-cursor">|</span></span>
+            </h1>
+            <p class="hero-tagline">
+                <span class="tagline-item">Engineering Student</span>
+                <span class="tagline-sep">•</span>
+                <span class="tagline-item">Tech Enthusiast</span>
+                <span class="tagline-sep">•</span>
+                <span class="tagline-item">Developer</span>
+            </p>
+            <p class="hero-description">
+                Passionate about building elegant solutions with code. Currently pursuing engineering and crafting
+                meaningful digital experiences.
+            </p>
+            <div class="hero-actions">
+                <a href="https://github.com/Sarkar-Subhonita" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-primary">
+                    <i data-lucide="github" class="btn-icon"></i>
+                    View My Work
+                </a>
+                <a href="mailto:subhonita0809@gmail.com?subject=Portfolio%20Contact&body=Hello%20Subhonita,"
+                    class="btn btn-outline">
+                    <i data-lucide="mail" class="btn-icon"></i>
+                    Get In Touch
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="5">0</span>+
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="6">0</span>+
+                    <span class="stat-label">Skills</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="3">0</span>+
+                    <span class="stat-label">Certifications</span>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator" id="scrollIndicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </a>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get to Know Me</span>
+                <h2 class="section-title">About <span class="highlight">Me</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-wrapper reveal-left">
+                    <div class="about-image-frame">
+                        <div class="about-image-placeholder">
+                            <i data-lucide="user" style="width:80px;height:80px;color:var(--accent-primary)"></i>
+                        </div>
+                        <div class="image-decoration dec-1"></div>
+                        <div class="image-decoration dec-2"></div>
+                    </div>
+                </div>
+                <div class="about-content reveal-right">
+                    <h3 class="about-heading">A passionate learner crafting the future, one line of code at a time.</h3>
+                    <p class="about-text">
+                        I'm an engineering student with a deep curiosity for technology and software development. I love
+                        exploring how things work under the hood and turning complex problems into simple, elegant
+                        solutions.
+                    </p>
+                    <p class="about-text">
+                        My journey in tech started with a fascination for how websites and apps are built. Since then,
+                        I've been diving into various programming languages, frameworks, and tools — constantly pushing
+                        myself to learn and grow.
+                    </p>
+                    <p class="about-text">
+                        When I'm not coding, you'll find me exploring new technologies, contributing to open-source
+                        projects, or reading about the latest trends in software engineering. I believe in the power of
+                        continuous learning and collaboration.
+                    </p>
+                    <div class="about-actions">
+                        <a href="#" class="btn btn-primary btn-resume" id="resumeBtn">
+                            <i data-lucide="download" class="btn-icon"></i>
+                            Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Expertise</span>
+                <h2 class="section-title">Skills & <span class="highlight">Technologies</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-categories">
+                <!-- Programming Languages -->
+                <div class="skill-category reveal-up">
+                    <div class="category-header">
+                        <div class="category-icon-wrap">
+                            <i data-lucide="code-2" class="category-icon"></i>
+                        </div>
+                        <h3 class="category-title">Programming Languages</h3>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-skill="Python">
+                            <div class="skill-icon-wrap"><span class="skill-emoji">🐍</span></div>
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="JavaScript">
+                            <div class="skill-icon-wrap"><span class="skill-emoji">⚡</span></div>
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="Java">
+                            <div class="skill-icon-wrap"><span class="skill-emoji">☕</span></div>
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="C++">
+                            <div class="skill-icon-wrap"><span class="skill-emoji">⚙️</span></div>
+                            <span class="skill-name">C / C++</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="SQL">
+                            <div class="skill-icon-wrap"><span class="skill-emoji">🗃️</span></div>
+                            <span class="skill-name">SQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tools & Platforms -->
+                <div class="skill-category reveal-up">
+                    <div class="category-header">
+                        <div class="category-icon-wrap">
+                            <i data-lucide="wrench" class="category-icon"></i>
+                        </div>
+                        <h3 class="category-title">Tools & Platforms</h3>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-skill="Git">
+                            <div class="skill-icon-wrap"><span class="skill-emoji">🌿</span></div>
+                            <span class="skill-name">Git & GitHub</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="VS Code">
+                            <div class="skill-icon-wrap"><span class="skill-emoji">💻</span></div>
+                            <span class="skill-name">VS Code</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="Linux">
+                            <div class="skill-icon-wrap"><span class="skill-emoji">🐧</span></div>
+                            <span class="skill-name">Linux</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="Figma">
+                            <div class="skill-icon-wrap"><span class="skill-emoji">🎨</span></div>
+                            <span class="skill-name">Figma</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="60"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Technologies & Frameworks -->
+                <div class="skill-category reveal-up">
+                    <div class="category-header">
+                        <div class="category-icon-wrap">
+                            <i data-lucide="layers" class="category-icon"></i>
+                        </div>
+                        <h3 class="category-title">Technologies & Frameworks</h3>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-skill="HTML/CSS">
+                            <div class="skill-icon-wrap"><span class="skill-emoji">🌐</span></div>
+                            <span class="skill-name">HTML / CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="React">
+                            <div class="skill-icon-wrap"><span class="skill-emoji">⚛️</span></div>
+                            <span class="skill-name">React</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="Node.js">
+                            <div class="skill-icon-wrap"><span class="skill-emoji">🟢</span></div>
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="MongoDB">
+                            <div class="skill-icon-wrap"><span class="skill-emoji">🍃</span></div>
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="60"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="Bootstrap">
+                            <div class="skill-icon-wrap"><span class="skill-emoji">🅱️</span></div>
+                            <span class="skill-name">Bootstrap</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Recent Work</span>
+                <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card reveal-up" id="project-1">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <i data-lucide="shopping-cart" style="width:48px;height:48px"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-overlay-btn" aria-label="View on GitHub">
+                                <i data-lucide="github"></i>
+                            </a>
+                            <a href="#" class="project-overlay-btn" aria-label="Live demo">
+                                <i data-lucide="external-link"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">
+                            A full-stack e-commerce web application with user authentication, product catalog, shopping
+                            cart, and payment integration.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm btn-primary">
+                                <i data-lucide="github" class="btn-icon"></i> Code
+                            </a>
+                            <a href="#" class="btn btn-sm btn-outline">
+                                <i data-lucide="external-link" class="btn-icon"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card reveal-up" id="project-2">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <i data-lucide="cloud-sun" style="width:48px;height:48px"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-overlay-btn" aria-label="View on GitHub">
+                                <i data-lucide="github"></i>
+                            </a>
+                            <a href="#" class="project-overlay-btn" aria-label="Live demo">
+                                <i data-lucide="external-link"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Weather Dashboard</h3>
+                        <p class="project-description">
+                            A responsive weather app that fetches real-time data using APIs. Features include
+                            location-based search, 5-day forecasts, and dynamic theming.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm btn-primary">
+                                <i data-lucide="github" class="btn-icon"></i> Code
+                            </a>
+                            <a href="#" class="btn btn-sm btn-outline">
+                                <i data-lucide="external-link" class="btn-icon"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card reveal-up" id="project-3">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <i data-lucide="bot" style="width:48px;height:48px"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-overlay-btn" aria-label="View on GitHub">
+                                <i data-lucide="github"></i>
+                            </a>
+                            <a href="#" class="project-overlay-btn" aria-label="Live demo">
+                                <i data-lucide="external-link"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">AI Chatbot</h3>
+                        <p class="project-description">
+                            An intelligent chatbot powered by natural language processing. Supports context-aware
+                            conversations and integrates with multiple platforms.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">TensorFlow</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm btn-primary">
+                                <i data-lucide="github" class="btn-icon"></i> Code
+                            </a>
+                            <a href="#" class="btn btn-sm btn-outline">
+                                <i data-lucide="external-link" class="btn-icon"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card reveal-up" id="project-4">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <i data-lucide="list-todo" style="width:48px;height:48px"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-overlay-btn" aria-label="View on GitHub">
+                                <i data-lucide="github"></i>
+                            </a>
+                            <a href="#" class="project-overlay-btn" aria-label="Live demo">
+                                <i data-lucide="external-link"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Task Management App</h3>
+                        <p class="project-description">
+                            A productivity tool with drag-and-drop boards, deadline tracking, team collaboration
+                            features, and real-time sync.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Material UI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm btn-primary">
+                                <i data-lucide="github" class="btn-icon"></i> Code
+                            </a>
+                            <a href="#" class="btn btn-sm btn-outline">
+                                <i data-lucide="external-link" class="btn-icon"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="project-card reveal-up" id="project-5">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <i data-lucide="image" style="width:48px;height:48px"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-overlay-btn" aria-label="View on GitHub">
+                                <i data-lucide="github"></i>
+                            </a>
+                            <a href="#" class="project-overlay-btn" aria-label="Live demo">
+                                <i data-lucide="external-link"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Portfolio Website</h3>
+                        <p class="project-description">
+                            This very website! A modern, responsive personal portfolio built from scratch with smooth
+                            animations and interactive UI.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm btn-primary">
+                                <i data-lucide="github" class="btn-icon"></i> Code
+                            </a>
+                            <a href="#" class="btn btn-sm btn-outline">
+                                <i data-lucide="external-link" class="btn-icon"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section class="section section-alt" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Journey</span>
+                <h2 class="section-title">Education & <span class="highlight">Qualifications</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal-left" id="edu-1">
+                    <div class="timeline-dot">
+                        <i data-lucide="graduation-cap" style="width:20px;height:20px"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">2024 — 2028</div>
+                        <h3 class="timeline-title">B.Tech in Computer Science & Engineering</h3>
+                        <p class="timeline-subtitle">
+                            <i data-lucide="building-2" class="timeline-icon"></i>
+                            KIET Deemed To Be University, Ghaziabad
+                        </p>
+                        <!--<p class="timeline-text">
+                            Pursuing a Bachelor's degree with a focus on software engineering, data structures,
+                            algorithms, and modern web technologies. Active participant in coding clubs and tech events.
+                        </p>-->
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">CGPA: 8.5+</span>
+                            <!--<span class="timeline-tag">Dean's List</span>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-right" id="edu-2">
+                    <div class="timeline-dot">
+                        <i data-lucide="school" style="width:20px;height:20px"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">2023 — 2024</div>
+                        <h3 class="timeline-title">Higher Secondary (Class XII) — Science</h3>
+                        <p class="timeline-subtitle">
+                            <i data-lucide="building-2" class="timeline-icon"></i>
+                            Swami Vivekanand Saraswati Vidya Mandir, Ghaziabad
+                        </p>
+                        <!--<p class="timeline-text">
+                            Completed higher secondary education with a focus on Physics, Chemistry, and Mathematics.
+                            Developed a strong foundation in analytical and problem-solving skills.
+                        </p>-->
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">PCM</span>
+                            <span class="timeline-tag">86%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-left" id="edu-3">
+                    <div class="timeline-dot">
+                        <i data-lucide="book-open" style="width:20px;height:20px"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">2021-2022</div>
+                        <h3 class="timeline-title">Secondary School (Class X)</h3>
+                        <p class="timeline-subtitle">
+                            <i data-lucide="building-2" class="timeline-icon"></i>
+                            Swami Vivekanand Saraswati Vidya Mandir, Ghaziabad
+                        </p>
+                        <!--<p class="timeline-text">
+                            Completed secondary education with distinction. First exposure to programming and computer
+                            science concepts.
+                        </p>-->
+                        <div class="timeline-tags">
+                            <span class="timeline-tag">90.8%</span>
+                            <!--<span class="timeline-tag">Computer Science</span>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Reach Out</span>
+                <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Have a question, project idea, or just want to say hello? I'd love to hear
+                    from you!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal-left">
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:subhonita@example.com">subhonita@example.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>India</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <div>
+                            <h4>Availability</h4>
+                            <p>Open to internship opportunities</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn" id="social-linkedin">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub" id="social-github">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="mailto:subhonita@example.com" class="social-link" aria-label="Email" id="social-email">
+                            <i data-lucide="mail"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter" id="social-twitter">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form reveal-right" id="contactForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Your Name</label>
+                        <div class="input-wrapper">
+                            <i data-lucide="user" class="input-icon"></i>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Your Email</label>
+                        <div class="input-wrapper">
+                            <i data-lucide="mail" class="input-icon"></i>
+                            <input type="email" id="email" name="email" class="form-input"
+                                placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <div class="input-wrapper textarea-wrapper">
+                            <i data-lucide="message-square" class="input-icon"></i>
+                            <textarea id="message" name="message" class="form-input form-textarea"
+                                placeholder="Tell me about your project or just say hello..." rows="5"
+                                required></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                        <i data-lucide="send" class="btn-icon"></i>
+                        Send Message
+                    </button>
+                    <div class="form-status" id="formStatus"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path
+                    d="M0 50L48 45.8C96 41.7 192 33.3 288 35.2C384 37 480 49 576 53.2C672 57.3 768 53.7 864 47.8C960 42 1056 34 1152 35.2C1248 36.3 1344 46.7 1392 51.8L1440 57V101H1392C1344 101 1248 101 1152 101C1056 101 960 101 864 101C768 101 672 101 576 101C480 101 384 101 288 101C192 101 96 101 48 101H0V50Z"
+                    fill="currentColor" />
+            </svg>
+        </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#home" class="nav-logo">
+                        <span class="logo-bracket">&lt;</span>SS<span class="logo-bracket"> /&gt;</span>
+                    </a>
+                    <p class="footer-tagline">Building the future, one line of code at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#education">Education</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        <a href="#" class="social-link" aria-label="GitHub"><i data-lucide="github"></i></a>
+                        <a href="mailto:subhonita@example.com" class="social-link" aria-label="Email"><i
+                                data-lucide="mail"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Subhonita Sarkar. All rights reserved.</p>
+                <p>Designed & Built with <span class="heart">❤</span> by Subhonita</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i data-lucide="chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

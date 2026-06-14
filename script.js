@@ -183,33 +183,107 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    /* ---------- CONTACT FORM ---------- */
+    /* ---------- CONTACT FORM (EmailJS) ---------- */
+    // ⚠️ Replace these placeholders with your actual EmailJS credentials:
+    // 1. Sign up at https://www.emailjs.com/
+    // 2. Create an Email Service (e.g. Gmail) and get the Service ID
+    // 3. Create an Email Template and get the Template ID
+    // 4. Copy your Public Key from Account > API Keys
+    const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';     // e.g. 'aBcDeFgHiJkLmNo'
+    const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';     // e.g. 'service_xxxxxxx'
+    const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';   // e.g. 'template_xxxxxxx'
+
+    // Initialize EmailJS
+    if (window.emailjs) {
+        emailjs.init(EMAILJS_PUBLIC_KEY);
+    }
+
     const contactForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
 
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
+
+        // Gather field values
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const subject = document.getElementById('subject') ? document.getElementById('subject').value.trim() : '';
+        const message = document.getElementById('message').value.trim();
+
+        // Client-side validation
+        if (!name) {
+            formStatus.textContent = '⚠️ Please enter your name.';
+            formStatus.style.color = '#f87171';
+            return;
+        }
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email || !emailRegex.test(email)) {
+            formStatus.textContent = '⚠️ Please enter a valid email address.';
+            formStatus.style.color = '#f87171';
+            return;
+        }
+        if (!message) {
+            formStatus.textContent = '⚠️ Please enter a message.';
+            formStatus.style.color = '#f87171';
+            return;
+        }
+
+        // Update button state
         const submitBtn = document.getElementById('submitBtn');
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<i data-lucide="loader-2" class="btn-icon spin"></i> Sending...';
         if (window.lucide) lucide.createIcons();
+        formStatus.textContent = '';
 
-        // Simulate form submission
-        setTimeout(() => {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = '<i data-lucide="check" class="btn-icon"></i> Sent!';
-            if (window.lucide) lucide.createIcons();
-            formStatus.textContent = '✅ Thank you! Your message has been sent successfully.';
-            formStatus.classList.add('success');
-            contactForm.reset();
+        // Template parameters (must match your EmailJS template variables)
+        const templateParams = {
+            from_name: name,
+            from_email: email,
+            subject: subject || 'Portfolio Contact',
+            message: message,
+        };
 
+        // Check if EmailJS is configured
+        if (!window.emailjs || EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
+            // Fallback: show success for development/preview
             setTimeout(() => {
-                submitBtn.innerHTML = '<i data-lucide="send" class="btn-icon"></i> Send Message';
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Send Message <i data-lucide="send" class="btn-icon"></i>';
                 if (window.lucide) lucide.createIcons();
-                formStatus.textContent = '';
-                formStatus.classList.remove('success');
-            }, 4000);
-        }, 1500);
+                formStatus.textContent = '⚠️ EmailJS not configured. Please add your credentials in script.js.';
+                formStatus.style.color = '#fbbf24';
+            }, 1000);
+            return;
+        }
+
+        // Send via EmailJS
+        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+            .then(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i data-lucide="check" class="btn-icon"></i> Sent!';
+                if (window.lucide) lucide.createIcons();
+                formStatus.textContent = '✅ Thank you! Your message has been sent successfully.';
+                formStatus.style.color = '#4ade80';
+                contactForm.reset();
+
+                setTimeout(() => {
+                    submitBtn.innerHTML = 'Send Message <i data-lucide="send" class="btn-icon"></i>';
+                    if (window.lucide) lucide.createIcons();
+                    formStatus.textContent = '';
+                }, 4000);
+            })
+            .catch((error) => {
+                console.error('EmailJS error:', error);
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Send Message <i data-lucide="send" class="btn-icon"></i>';
+                if (window.lucide) lucide.createIcons();
+                formStatus.textContent = '❌ Failed to send message. Please try again or email me directly.';
+                formStatus.style.color = '#f87171';
+
+                setTimeout(() => {
+                    formStatus.textContent = '';
+                }, 5000);
+            });
     });
 
     /* ---------- TILT EFFECT ON PROJECT CARDS ---------- */

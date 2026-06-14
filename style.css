@@ -618,6 +618,7 @@ ul {
 .btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     padding: 14px 28px;
     font-size: 0.95rem;
@@ -629,11 +630,15 @@ ul {
     transition: all 0.3s var(--ease-out);
     position: relative;
     overflow: hidden;
+    line-height: 1;
 }
 
 .btn-icon {
     width: 18px;
     height: 18px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .btn-primary {

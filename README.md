@@ -71,11 +71,11 @@ or run with Live Server.
 
 Engineering Student | Tech Enthusiast | Developer
 
-GitHub: https://github.com/yourusername
+GitHub: https://github.com/Sarkar-Subhonita
 
-LinkedIn: https://linkedin.com/in/yourprofile
+LinkedIn: https://www.linkedin.com/in/subhonita-sarkar/
 
-Email: yourmail@example.com
+Email: subhonita0809@gmail.com
 
 ---
 

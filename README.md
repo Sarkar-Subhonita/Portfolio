@@ -4,7 +4,7 @@ A modern and responsive portfolio website showcasing my skills, projects, educat
 
 ## 🚀 Live Demo
 
-[View Portfolio](https://yourusername.github.io/portfolio/)
+[View Portfolio](https://subhonitasarkar-portfolio.vercel.app/)
 
 ---
 

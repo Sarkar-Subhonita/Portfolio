@@ -189,9 +189,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Create an Email Service (e.g. Gmail) and get the Service ID
     // 3. Create an Email Template and get the Template ID
     // 4. Copy your Public Key from Account > API Keys
-    const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';     // e.g. 'aBcDeFgHiJkLmNo'
-    const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';     // e.g. 'service_xxxxxxx'
-    const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';   // e.g. 'template_xxxxxxx'
+    const EMAILJS_PUBLIC_KEY = 'e_sXQk2qdxGa1aqyp';     // e.g. 'aBcDeFgHiJkLmNo'
+    const EMAILJS_SERVICE_ID = 'service_yxkn4ak';     // e.g. 'service_xxxxxxx'
+    const EMAILJS_TEMPLATE_ID = 'template_x7f9xs3';   // e.g. 'template_xxxxxxx'
 
     // Initialize EmailJS
     if (window.emailjs) {
